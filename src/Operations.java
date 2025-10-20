@@ -74,6 +74,20 @@ public class Operations {
         return newnumber;
     }
 
+    public static int[] Division(int[] number1, int divider) {
+        int[] newnumber=new int[number1.length];
+        int remaining=0;
+        int l=number1.length;
+        for (int i=0;i<l;i++) {
+            int aux=10*remaining+number1[i];
+            int division=aux/divider;
+            newnumber[i]=division;
+            remaining=aux%divider;
+        }
+
+        return newnumber;
+    }
+
     public static int intConvert(int[] arr){
         int number=0;
         for (int i=0;i<arr.length;i++) {

@@ -60,14 +60,17 @@ public class Operations {
         }
         return newnumber;
     }
+
     public static int[] Multiplication(int[] number1, int multiplier) {
         int[] newnumber=new int[number1.length+1];
         int remaining=0;
         int l=number1.length;
         for (int i=0;i<l;i++) {
-            newnumber[l-i-1]=number1[l-i-1]*multiplier+remaining;
-            remaining=(number1[l-i-1]*multiplier)/10;
+            int product=(number1[l-i-1]*multiplier)+remaining;
+            newnumber[l-i]=product%10;
+            remaining=product/10;
         }
+        newnumber[0]=remaining;
         return newnumber;
     }
 

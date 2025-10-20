@@ -2,8 +2,9 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int[] number1={8,7,0,0,0,0};
+        int[] number1={8,7,0,0,0,3};
         int[] number2={1,3,0,0,0,0};
+        int multiplier=2;
         System.out.println("The numbers are: "+Operations.intConvert(number1)+" and "+Operations.intConvert(number2));
 
         //1
@@ -21,11 +22,13 @@ public class Main {
             System.out.print(newnumber2[i]);
         }
 
-        int multiplier=2;
+        //3
         System.out.println();
-        System.out.print("The multiplication between "+Operations.intConvert(number1)+" and "+multiplier+":");
+        System.out.print("The multiplication between "+Operations.intConvert(number1)+" and "+multiplier+": ");
         int[] newnumber3=Operations.Multiplication(number1,multiplier);
-//        System.out.print(newnumber3[0]);
+        for(int i=0;i<newnumber3.length;i++){
+            System.out.print(newnumber3[i]);
+        }
     }
 
 
